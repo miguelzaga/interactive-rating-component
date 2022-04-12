@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --fontWeightLight: 400;
+  --fontWeightBold: 700;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background-color: var(--veryDarkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  font-weight: var(--fontWeightLight);
+  color: var(--lightGrey);
+}
+
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-card {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 15px;
+  padding: 24px;
+  font-size: 14px;
+  max-width: 416px;
+}
+
+.card-title {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.card-description {
+  margin-bottom: 24px;
+  line-height: 22px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rating-input {
+  appearance: none;
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.rating-label {
+  font-weight: var(--fontWeightBold);
+}
+
+.rating-input + .rating-label,
+.circle {
+  position: relative;
+  background-color: var(--darkBlue);
+  text-align: center;
+  transition: 0.2s ease-out;
+}
+
+.circle {
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.rating-input + .rating-label {
+  padding: 13px;
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+}
+
+.rating-input:hover + .rating-label {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating-input:checked + .rating-label {
+  background-color: var(--mediumGrey);
+  color: var(--white);
+}
+
+.submit-btn {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 22.5px;
+  background-color: var(--orange);
+  border: none;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 1.87px;
+  font-size: 14px;
+  transition: 0.2s ease-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.thank-img {
+  margin-top: 20px;
+}
+
+.rating-msg {
+  background-color: var(--darkBlue);
+  color: var(--orange);
+  width: fit-content;
+  padding: 5px 12px;
+  margin: 24px auto;
+  border-radius: 22.5px;
+}
+
+#thank-state .card-title {
+  margin-top: 0;
+}
+
+#thank-state .card-description {
+  margin-bottom: 13px;
+}
+
+.attribution {
+  position: fixed;
+  width: 300px;
+  bottom: 15px;
+  left: calc(50% - 150px);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--orange);
+}
+
+@media (min-width: 400px) {
+  .main-card {
+    padding: 32px 40px 32px 32px;
+  }
+
+  .card-title {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 7px;
+  }
+
+  .card-description {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .circle {
+    padding: 15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+  }
+
+  .rating {
+    margin-bottom: 32px;
+  }
+
+  .rating-label {
+    font-size: 16px;
+  }
+
+  .rating-input + .rating-label {
+    padding: 17px;
+    width: 51px;
+    height: 51px;
+    border-radius: 51px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+  }
+
+  .thank-img {
+    margin-top: 23px;
+  }
+
+  .rating-msg {
+    font-size: 15px;
+  }
+
+  #thank-state .card-description {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}

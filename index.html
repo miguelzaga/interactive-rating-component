@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&family=Overpass&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Rating state start -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <h1 style="display: none">Interactive rating component</h1>
+    <!-- Rating state start -->
+    <section id="rating-state" class="main-card">
+      <div class="circle">
+        <img src="images/icon-star.svg" alt="" />
+      </div>
+      <header>
+        <h2 class="card-title">How did we do?</h2>
+        <p class="card-description">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </header>
+      <form id="rating-form" action="">
+        <div class="rating">
+          <input class="rating-input" type="radio" name="rating" id="1" />
+          <label class="rating-label" for="1"> 1 </label>
 
-  How did we do?
+          <input class="rating-input" type="radio" name="rating" id="2" />
+          <label class="rating-label" for="2"> 2 </label>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+          <input class="rating-input" type="radio" name="rating" id="3" />
+          <label class="rating-label" for="3"> 3 </label>
 
-  1 2 3 4 5
+          <input class="rating-input" type="radio" name="rating" id="4" />
+          <label class="rating-label" for="4"> 4 </label>
 
-  Submit
+          <input class="rating-input" type="radio" name="rating" id="5" />
+          <label class="rating-label" for="5"> 5 </label>
+        </div>
+        <button id="submit-btn" class="submit-btn" type="submit">Submit</button>
+      </form>
+    </section>
+    <!-- Rating state end -->
 
-  <!-- Rating state end -->
+    <!-- Thank you state start -->
+    <section class="main-card text-center hidden" id="thank-state">
+      <img class="thank-img" src="images/illustration-thank-you.svg" alt="" />
 
-  <!-- Thank you state start -->
+      <p class="rating-msg">
+        You selected <span id="rating-msg-value"></span> out of 5
+      </p>
 
-  You selected <!-- Add rating here --> out of 5
+      <header>
+        <h2 class="card-title">Thank you!</h2>
+        <p class="card-description">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </header>
+    </section>
 
-  Thank you!
+    <!-- Thank you state end -->
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/miguelzaga"
+        >Miguel Zapata</a
+      >.
+    </footer>
+  </body>
 </html>
